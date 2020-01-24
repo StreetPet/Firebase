@@ -1,0 +1,81 @@
+{
+  "hosting": [
+    {
+      "target":"petfriendly-jekyll",
+      "public": "../jekyll/jekyll-theme-mrwooo-solid-state/_site",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "target":"petfriendly",
+      "predeploy": "bundle exec jekyll build  --config _config.petfriendly.yml ",
+      "public": "public_petfriendly",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "target": "streetpet-jekyll",
+      "public": "naveenshaji-jekyll-theme-material/_site",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "target": "streetpet",
+      "public": "public_streetpet",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "http://streetpet.web.app"
+        }
+      ]
+    },
+    {
+      "target": "street-pet",
+      "public": "public_streetpet",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "redirects": [
+        {
+          "source": "/",
+          "destination": "http://streetpet.web.app",
+          "type": 302
+        }
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ],
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "hosting": {
+      "port": 5000
+    }
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}
