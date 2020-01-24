@@ -1,0 +1,93 @@
+#Material HTML5 Template (https://naveenshaji.github.io/material)
+#The MIT License (MIT)
+#
+#Copyright (c) 2015 Naveen Shaji
+#
+#Permission is hereby granted, free of charge, to any person obtaining a copy
+#of this software and associated documentation files (the "Software"), to deal
+#in the Software without restriction, including without limitation the rights
+#to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+#copies of the Software, and to permit persons to whom the Software is
+#furnished to do so, subject to the following conditions:
+#
+#The above copyright notice and this permission notice shall be included in
+#all copies or substantial portions of the Software.
+#
+#THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+#IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+#FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+#AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+#LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+#THE SOFTWARE.
+
+
+#
+source: ../jekyll/naveenshaji-jekyll-theme-material
+destination: ./public/streetpet
+
+# Site settings
+title: Street Pet
+email: streetpet@carlosdelfino.eti.br
+description: > # this means to ignore newlines until "baseurl:"
+  Sistema de Apoio e Amparo a Animais Abandonados!
+baseurl: "/" # the subpath of your site, e.g. /blog/
+#url: "https://streetpet.web.app" # the base hostname & protocol for your site
+
+github_username:  streetpet
+repository: streetpet/jekyll-theme-naveenshaji-material
+
+css: "cyan"
+scroll-cursor: "#00BCD4"
+scroll-rail: "#0097A7"
+
+# Social and analytics
+twitter_username: streetpet
+google:
+  analytics:
+      id: UA-156621148
+      domain:
+  adsense:
+      client: ca-pub-1710447158146560
+      slot: 8511319937
+
+# Build settings
+markdown: kramdown
+highlighter: null #pygments
+lsi: false
+safe: false
+
+# Firebase and Tools
+
+bootstrap_version: 3.2.0
+jquery_version: 1.11.1
+angularfire_version: 2.3.0
+
+angular:
+  version: 1.2.21
+
+firebase:
+  version: 7.7.0
+  url: "https://street-pet.firebaseio.com/"
+  auth: true
+  database: true
+  messaging: true
+  storage: true
+  
+plugins:
+ - jekyll-github-metadata
+ - jekyll-feed
+ - jekyll-paginate
+ - jekyll-sitemap
+ - jekyll-mentions
+ - jekyll-redirect-from
+ - jekyll-sass-converter
+ - jekyll-seo-tag
+ - jekyll-archives
+ - kramdown
+ - liquid
+ - rouge
+ - pygments
+ - jemoji
+ - sass
+ - safe_yaml

@@ -1,0 +1,69 @@
+source: ../jekyll/jekyll-theme-mrwooo-solid-state
+destination: ./public/petfriendly
+
+title: Pet Friendly
+short_description: PetFriendly um submódulo de StreetPet
+description: >- # this means to ignore newlines until "baseurl:"
+  Um projeto desenvolvido pela Equipe StreetPet. 
+baseurl: "/"
+
+github_username:  streetpet
+repository: streetpet/jekyll-theme-naveenshaji-material
+
+# google services
+ganalytics: UA-156621148-2
+gtagmanager:
+gmapsapikey: AIzaSyDxbkicoGy26nUK4NdjILbxzPQcLEc3sTQ
+
+# facebook
+fpixel:
+  
+# contacts
+address:
+phone:
+email: petfriendly@carlosdelfino.eti.br
+  
+# social
+twitter:
+facebook: PetFriendly.oficial.br
+instagram:
+linkedin:
+youtube:
+googleplus:
+github: github.com/streetpet
+dribbble:
+
+# copyright
+owner: https://streetpet.app.web
+
+# collections
+collections:
+  main:
+    output: true
+    permalink: /main/:name
+
+defaults:
+  - scope:
+      path: 'assets/images'
+      type: 'main'
+    values:
+      image: true
+
+plugins:
+ - jekyll-github-metadata
+ - jekyll-feed
+ - jekyll-paginate
+ - jekyll-sitemap
+ - jekyll-mentions
+ - jekyll-redirect-from
+ - jekyll-sass-converter
+ - jekyll-seo-tag
+ - jekyll-archives
+ - kramdown
+ - liquid
+ - rouge
+ - pygments
+ - jemoji
+ - sass
+ - safe_yaml
+
