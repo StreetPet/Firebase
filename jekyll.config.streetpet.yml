@@ -23,7 +23,7 @@
 
 
 #
-source: ../jekyll/naveenshaji-jekyll-theme-material
+source: ../jekyll/jekyll-theme-naveenshaji-material
 destination: ./public/streetpet
 
 # Site settings
