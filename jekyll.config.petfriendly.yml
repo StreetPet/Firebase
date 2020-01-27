@@ -1,5 +1,5 @@
 source: ../jekyll/jekyll-theme-mrwooo-solid-state
-destination: ./public/petfriendly
+destination: ./public/petfriendly 
 
 title: Pet Friendly
 short_description: PetFriendly um submódulo de StreetPet
@@ -25,12 +25,12 @@ email: petfriendly@carlosdelfino.eti.br
   
 # social
 twitter:
-facebook: PetFriendly.oficial.br
+facebook: https://facebook.com/PetFriendly.oficial.br
 instagram:
 linkedin:
 youtube:
 googleplus:
-github: github.com/streetpet
+github: https://github.com/streetpet
 dribbble:
 
 # copyright
