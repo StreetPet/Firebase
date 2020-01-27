@@ -1,0 +1,26 @@
+{
+  "projects": {
+    "default": "street-pet"
+  },
+  "targets": {
+    "street-pet": {
+      "hosting": {
+        "petfriendly":[
+          "petfriendly"
+        ],
+        "petfriendly-jekyll":[
+          "petfriendly-jekyll"
+        ],
+        "streetpet": [
+          "streetpet"
+        ],
+        "street-pet": [
+          "street-pet"
+        ],
+        "streetpet-jekyll": [
+          "streetpet-jekyll"
+        ]
+      }
+    }
+  }
+}
