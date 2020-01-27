@@ -1,0 +1,77 @@
+{
+  "$schema": "../Angular//node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "JekyllFirebaseVoluntarios": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "sass"
+        }
+      },
+      "root": "../Angular/projects/JekyllFirebaseVoluntarios",
+      "sourceRoot": "../Angular/projects/JekyllFirebaseVoluntarios/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "aot": true,
+            "optimization": true,
+            "sourceMap": false,
+            "buildOptimizer": true,
+            "outputPath": "../jekyll/jekyll-theme-naveenshaji-material/app/voluntarios",
+            "baseHref": "/app/voluntarios/",
+            "index": "../Angular/projects/JekyllFirebaseVoluntarios/src/index.html",
+            "main": "../Angular/projects/JekyllFirebaseVoluntarios/src/main.ts",
+            "polyfills": "../Angular/projects/JekyllFirebaseVoluntarios/src/polyfills.ts",
+            "tsConfig": "../Angular//projects/JekyllFirebaseVoluntarios/tsconfig.app.json",
+            "assets": [
+              "../Angular/projects/JekyllFirebaseVoluntarios/src/favicon.ico",
+              "../Angular/projects/JekyllFirebaseVoluntarios/src/assets"
+            ],
+            "styles": [
+              "../Angular/projects/JekyllFirebaseVoluntarios/src/styles.sass"
+            ],
+            "scripts": [
+              "../Angular/node_modules/jquery/dist/jquery.min.js"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "../Angular/projects/JekyllFirebaseVoluntarios/src/environments/environment.ts",
+                  "with": "../Angular/projects/JekyllFirebaseVoluntarios/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "JekyllFirebaseVoluntarios"
+}

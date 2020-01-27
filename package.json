@@ -1,0 +1,29 @@
+{
+  "name": "firebase-workspace-streetpet",
+  "version": "0.0.1",
+  "description": "Espaço de trabalho do Firebase, este pacote ajuda a usar as ferramentas no nodejs localmente, todos os pacotes aqui carregados são apenas de apoio ao desenvolvimento",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StreetPet/firebase.git"
+  },
+  "keywords": [
+    "firebase",
+    "streetpet",
+    "petfriendly",
+    "angular"
+  ],
+  "author": "Carlos Delfino <consultoria@carlosdelfino.eti.br> (http://carlosdelfino.eti.br)",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/StreetPet/firebase/issues"
+  },
+  "homepage": "https://github.com/StreetPet/firebase#readme",
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^0.803.23",
+    "@angular/cli": "^8.3.23",
+    "@angular/compiler": "^8.2.14",
+    "@angular/compiler-cli": "^8.2.14",
+    "@angular/core": "^8.2.14"
+  }
+}

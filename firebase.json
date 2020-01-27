@@ -1,36 +1,12 @@
 {
   "hosting": [
     {
-      "target":"petfriendly-jekyll",
-      "public": "../jekyll/jekyll-theme-mrwooo-solid-state/_site",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ]
-    },
-    {
-      "target":"petfriendly",
-      "predeploy": "bundle exec jekyll build  --config _config.petfriendly.yml ",
-      "public": "public_petfriendly",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ]
-    },
-    {
-      "target": "streetpet-jekyll",
-      "public": "naveenshaji-jekyll-theme-material/_site",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
-      ]
-    },
-    {
       "target": "streetpet",
-      "public": "public_streetpet",
+      "public": "./public/streetpet",
+      "predeploy": [
+        "ng build  JekyllFirebaseVoluntarios --prod",
+        "bundle exec jekyll build  --config jekyll.config.streetpet.yml "
+      ],
       "ignore": [
         "firebase.json",
         "**/.*",
@@ -44,8 +20,36 @@
       ]
     },
     {
+      "target":"petfriendly",
+      "predeploy": "bundle exec jekyll build  --config jekyll.config.petfriendly.yml ",
+      "public": "./public/petfriendly",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "target":"petfriendly-jekyll",
+      "public": "../jekyll/jekyll-theme-mrwooo-solid-state/_site",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
+      "target": "streetpet-jekyll",
+      "public": "../jekyll/jekyll-theme-naveenshaji-material/_site",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
       "target": "street-pet",
-      "public": "public_streetpet",
+      "public": "./public/public.old",
       "ignore": [
         "firebase.json",
         "**/.*",
