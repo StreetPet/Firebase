@@ -81,5 +81,6 @@
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
-  }
+  },
+  "rules": "firebase-security-rules.json"
 }

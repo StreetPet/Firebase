@@ -1,0 +1,34 @@
+{
+  "rules": {
+    ".read": true,
+      "comment-counts": {
+        "$post": {
+          ".write": "auth != null",
+          ".validate": "newData.isNumber()"
+        }
+      },
+      "posts": {
+        "$post": {
+          "$commentId": {
+            ".write": "auth.uid === newData.child('uid').val() && !data.exists() && newData.exists()",
+            ".validate": "newData.hasChildren(['comment', 'uid'])",
+            "comment": {
+              ".validate": "newData.isString() && newData.val().length > 0 && newData.val().length < 2000"
+            },
+            "uid": {
+              ".validate": "newData.exists()"
+            },
+            "$other": {
+              ".validate": false
+            }
+          }
+        }
+      },
+      "users": {
+        "$uid": {
+          ".write": "auth.uid == newData.child('uid').val()",
+          ".validate": "newData.hasChild('uid')"
+        }
+      }
+  }
+}
