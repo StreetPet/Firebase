@@ -3,47 +3,57 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "JekyllFirebaseVoluntarios": {
+    "Voluntarios": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "sass"
+          "style": "scss"
         }
       },
-      "root": "../Angular/projects/JekyllFirebaseVoluntarios",
-      "sourceRoot": "../Angular/projects/JekyllFirebaseVoluntarios/src",
+      "root": "../Angular/projects/Voluntarios",
+      "sourceRoot": "../Angular/projects/Voluntarios/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "aot": true,
-            "optimization": true,
-            "sourceMap": false,
-            "buildOptimizer": true,
             "outputPath": "../jekyll/jekyll-theme-naveenshaji-material/app/voluntarios",
             "baseHref": "/app/voluntarios/",
-            "index": "../Angular/projects/JekyllFirebaseVoluntarios/src/index.html",
-            "main": "../Angular/projects/JekyllFirebaseVoluntarios/src/main.ts",
-            "polyfills": "../Angular/projects/JekyllFirebaseVoluntarios/src/polyfills.ts",
-            "tsConfig": "../Angular//projects/JekyllFirebaseVoluntarios/tsconfig.app.json",
+            "index": "../Angular/projects/Voluntarios/src/index.html",
+            "main": "../Angular/projects/Voluntarios/src/main.ts",
+            "polyfills": "../Angular/projects/Voluntarios/src/polyfills.ts",
+            "tsConfig": "../Angular/projects/Voluntarios/tsconfig.app.json",
+            "aot": false,
             "assets": [
-              "../Angular/projects/JekyllFirebaseVoluntarios/src/favicon.ico",
-              "../Angular/projects/JekyllFirebaseVoluntarios/src/assets"
+              "../Angular/projects/Voluntarios/src/favicon.ico",
+              "../Angular/projects/Voluntarios/src/assets",
+              {
+                "glob": "**/*.svg",
+                "input": "../Angular/node_modules/ionicons/dist/ionicons/svg",
+                "output": "./svg"
+              }
             ],
             "styles": [
-              "../Angular/projects/JekyllFirebaseVoluntarios/src/styles.sass"
+              "../Angular/node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "../Angular/projects/Voluntarios/src/styles.scss"
             ],
             "scripts": [
-              "../Angular/node_modules/jquery/dist/jquery.min.js"
+              "../Angular/node_modules/jquery/dist/jquery.min.js",
+              "../Angular/js/jquery.nicescroll.min.js",
+              "../Angular/js/jquery.nicescroll.plus.js",
+              "../Angular/js/velocity.min.js",
+              "../Angular/js/skrollr.min.js",
+              "../Angular/js/jquery.scrolline.js",
+              "../Angular/js/modernizr.js",
+              "../Angular/js/main.js"
             ]
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "../Angular/projects/JekyllFirebaseVoluntarios/src/environments/environment.ts",
-                  "with": "../Angular/projects/JekyllFirebaseVoluntarios/src/environments/environment.prod.ts"
+                  "replace": "../Angular/projects/Voluntarios/src/environments/environment.ts",
+                  "with": "../Angular/projects/Voluntarios/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -73,5 +83,5 @@
       }
     }
   },
-  "defaultProject": "JekyllFirebaseVoluntarios"
+  "defaultProject": "Voluntarios"
 }

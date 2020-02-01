@@ -4,7 +4,7 @@
       "target": "streetpet",
       "public": "./public/streetpet",
       "predeploy": [
-        "ng build  JekyllFirebaseVoluntarios --prod",
+        "ng build  Voluntarios --prod",
         "bundle exec jekyll build  --config jekyll.config.streetpet.yml "
       ],
       "ignore": [
@@ -16,6 +16,10 @@
         {
           "source": "**",
           "destination": "http://streetpet.web.app"
+        },
+        {
+          "source": "**",
+          "destination": "app/voluntarios/"
         }
       ]
     },
